@@ -12,8 +12,8 @@ services:
     volumes:
       - .:/var/www/html/
     environment:
-      - SECURITY_SALT  
-      - MYSQL_URL=localhost
+      - SECURITY_SALT
+      - MYSQL_HOST
       - MYSQL_USERNAME
       - MYSQL_PASSWORD
 volumes:
