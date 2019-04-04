@@ -201,3 +201,10 @@ Type::build('timestamp')
 //Inflector::rules('irregular', ['red' => 'redlings']);
 //Inflector::rules('uninflected', ['dontinflectme']);
 //Inflector::rules('transliteration', ['/å/' => 'aa']);
+
+//Always set cache heaaders such that response is not cached
+//If endpoint wishes to change cache time they can override
+header('Cache-Control: max-age=0, no-store, no-cache');
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: Authorization");
+header("Access-Control-Allow-Methods: DELETE,GET,HEAD,OPTIONS,POST,PUT");

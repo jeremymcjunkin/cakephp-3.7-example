@@ -248,7 +248,7 @@ $return = [
             'className' => 'Cake\Database\Connection',
             'driver' => 'Cake\Database\Driver\Mysql',
             'persistent' => false,
-            'host' => env('MYSQL_HOST', '172.17.0.1'),
+            'host' => env('MYSQL_HOST', null),
             /*
              * CakePHP will use the default DB port based on the driver selected
              * MySQL on MAMP uses port 8889, MAMP users will want to uncomment
@@ -257,7 +257,7 @@ $return = [
             'port' => env('MYSQL_PORT', '3306'),
             'username' => env('MYSQL_USERNAME', ''),
             'password' => env('MYSQL_PASSWORD', ''),
-            'database' => 'junker_teammanager',
+            'database' => env('MYSQL_DATABASE', ''),
             /*
              * You do not need to set this flag to use full utf-8 encoding (internal default since CakePHP 3.6).
              */
@@ -300,7 +300,7 @@ $return = [
             //'port' => 'non_standard_port_number',
             'username' => env('MYSQL_USERNAME', ''),
             'password' => env('MYSQL_PASSWORD', ''),
-            'database' => 'junker_teammanager',
+            'database' => 'test_database',
             //'encoding' => 'utf8mb4',
             'timezone' => 'UTC',
             'cacheMetadata' => true,
@@ -384,5 +384,5 @@ $return = [
         'defaults' => 'php',
     ],
 ];
-//var_export($return);
+var_export($return);
 return $return;

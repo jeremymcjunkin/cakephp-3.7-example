@@ -1,0 +1,1 @@
+GRANT ALL PRIVILEGES ON junker_teammanager.* TO 'ws_user'@'%' IDENTIFIED BY 'f083d0E9aZ2c4';
